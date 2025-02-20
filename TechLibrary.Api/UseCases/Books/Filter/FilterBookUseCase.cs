@@ -17,7 +17,6 @@ namespace TechLibrary.Api.UseCases.Books.Filter
             if(string.IsNullOrWhiteSpace(request.Title) == false)
             {
                 query = query.Where(book => book.Title.ToUpper().Contains(request.Title.ToUpper()));
-                //query = query.Where(book => book.Title.Contains(request.Title.ToUpper()));
             }
 
             var books = query
